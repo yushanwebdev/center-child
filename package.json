@@ -22,5 +22,8 @@
   "auto-changelog": {
     "commitLimit": false,
     "template": "keepachangelog"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }
