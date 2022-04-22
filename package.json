@@ -1,7 +1,6 @@
 {
   "name": "center-child",
-  "private": true,
-  "version": "4.0.0",
+  "version": "1.0.0",
   "files": [
     "dist/styles.css"
   ],
@@ -15,6 +14,7 @@
   },
   "devDependencies": {
     "auto-changelog": "^2.4.0",
+    "rimraf": "^3.0.2",
     "sass": "^1.50.1",
     "typescript": "^4.5.4",
     "vite": "^2.9.5"
@@ -22,8 +22,5 @@
   "auto-changelog": {
     "commitLimit": false,
     "template": "keepachangelog"
-  },
-  "dependencies": {
-    "rimraf": "^3.0.2"
   }
 }
