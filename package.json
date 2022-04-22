@@ -7,8 +7,11 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "clean": "rimraf dist",
+    "build": "yarn clean && tsc && vite build",
+    "preversion": "yarn build",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "auto-changelog": "^2.4.0",
