@@ -23,19 +23,19 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Install Dependencies
-        run: yarn
+        run: npm install
 
       - name: Building
-        run: yarn build
+        run: npm run build
 
       - name: Publish to NPM
         run: |
           yarn config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-          yarn publish
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
