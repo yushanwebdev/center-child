@@ -2,6 +2,9 @@
   "name": "center-child",
   "private": true,
   "version": "0.0.0",
+  "files": [
+    "dist/styles.css"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
